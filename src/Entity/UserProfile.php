@@ -30,8 +30,6 @@ class UserProfile
     private ?\DateTimeInterface $dateOfBirth = null;
 
 
-   
-
     public function getId(): ?int
     {
         return $this->id;
