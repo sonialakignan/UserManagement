@@ -14,6 +14,11 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/profile')]
 class UserProfileController extends AbstractController
 {
+
+    public function __construct(private readonly EntityManagerInterface $em)
+    {
+        
+    }
     #[Route('/', name: 'app_profile_show', methods: ['GET'])]
     public function show(UserProfileRepository $repo): Response
     {
